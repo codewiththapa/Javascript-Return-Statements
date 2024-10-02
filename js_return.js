@@ -123,4 +123,109 @@ let arr = (val1,val2) =>{
   document.write(atLast)            // output: yes this statement is true
 
 
+//
+
+const myArrowfunc = (name,age) =>{
+  console.log(name,age);            // output : suman 29 ... will print in console
+  return name+"  "+age
+};
+
+const now = myArrowfunc('suman' , 29)
+document.write(now)                   // suman 29 ...will print outside in interface
+ 
+
+//
+
+
+function toCalculate (a,b,callback){
+  return callback(a,b)
+}
+
+const thisResult = toCalculate(20,30,function(nmbr1,nmbr2){
+ return nmbr1+nmbr2
+});
+
+document.write(thisResult);
+
+// subtraction..
+
+const thisSubtraction = (x,y) => x-y
+
+const ow = toCalculate(10,50,thisSubtraction)
+document.write(ow);
+
+//multiply 
+
+function multiplYIs (m,n){
+ return m*n
+};
+
+const multiResult = toCalculate(12,12,multiplYIs)
+document.write(multiResult);
+
+
+//
+
+function xyw (a,b,cb){
+
+  return cb(a,b)
+ }
+ const final = xyw (100,12,
+               function (ab,bc){return (ab+bc) })
+ 
+ console.log(final)     // output: 100+12=112
+                                
+
+ //
+
+ function last (a,b,cb){
+  console.log(cb(a,b))      //output:  5
+  }
+  
+  last (2,3,(x,y)=>{
+   return (x+y)
+  })
+  
+  //
+  function stat (a,b,cb){
+   return cb(a,b)
+  }
+  
+  stat (5,3,(x,y)=>{
+  console.log(x+y)        //output : 7
+  })
+
+
+
+  //
+   function stat (a,b,cb){
+ 
+    cb()                     //output : hi
+     console.log(a+b)        //output : 5+3 = 8
+    }
     
+    stat (5,3,()=>{
+    console.log('hi')
+    })
+
+ //
+ 
+ function last (name,age,cb) {
+  console.log( cb(name,age))
+}
+
+last ('suman',29,function(a,b){
+return (a+b)
+})
+
+//
+function here (name,country,cb) {
+  return cb(name,country)
+}
+
+here ('thapa','nepal',function(a,b){
+ document.write(a+b)
+})
+
+
+               /*  THE   END     */
